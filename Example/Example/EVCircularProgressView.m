@@ -120,7 +120,7 @@
         
         [self stopIndeterminateAnimation];
         
-        self.shapeLayer.lineWidth = 3;
+        self.shapeLayer.lineWidth = 4;
         
         self.shapeLayer.path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
                                                               radius:self.bounds.size.width/2 - 2
@@ -145,7 +145,6 @@
     } else {
         // If progress is zero, then add the indeterminate animation
         [self.shapeLayer removeAnimationForKey:@"animation"];
-        
         [self startIndeterminateAnimation];
     }
 }
@@ -200,7 +199,7 @@
     
     self.backgroundLayer.hidden = YES;
     
-    self.shapeLayer.lineWidth = 1;
+    self.shapeLayer.lineWidth = 2;
     self.shapeLayer.path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
                                                           radius:self.bounds.size.width/2 - 1
                                                       startAngle:DEGREES_TO_RADIANS(348)
